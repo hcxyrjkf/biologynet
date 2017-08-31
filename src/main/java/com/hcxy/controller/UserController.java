@@ -30,4 +30,10 @@ public class UserController {
                         HttpSession session) {
         return userService.save(user, session);
     }
+
+    @DeleteMapping(value = "/users/{id}")
+    public Object userDelete(@PathVariable("id") Integer id,
+                             HttpSession session) {
+        return userService.delete(id, session);
+    }
 }

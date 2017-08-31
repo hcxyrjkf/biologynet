@@ -3,6 +3,7 @@ package com.hcxy.service;
 import com.hcxy.entity.ResultMessage;
 import com.hcxy.entity.User;
 import com.hcxy.repository.UserRepository;
+import com.sun.org.apache.regexp.internal.RE;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -47,6 +48,22 @@ public class UserService {
             userRepository.save(user);
             resultMessage.setCode(1);
             resultMessage.setMessage("成功添加或更新一个用户");
+        } else {
+            resultMessage.setCode(0);
+            resultMessage.setMessage("没有操作权限");
+        }
+        return resultMessage;
+    }
+
+    public ResultMessage delete(Integer id,
+                                HttpSession session) {
+
+        ResultMessage resultMessage = new ResultMessage();
+        int loginStatus = authService.checkLoginStatus(session);
+        if(loginStatus == 1) {
+            userRepository.delete(id);
+            resultMessage.setCode(1);
+            resultMessage.setMessage("成功删除用户");
         } else {
             resultMessage.setCode(0);
             resultMessage.setMessage("没有操作权限");
