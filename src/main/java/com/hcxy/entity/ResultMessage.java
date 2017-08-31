@@ -10,6 +10,11 @@ public class ResultMessage {
 
     private String message;
 
+    private Object content;
+
+    public ResultMessage() {
+    }
+
     public int getCode() {
         return code;
     }
@@ -24,5 +29,13 @@ public class ResultMessage {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public Object getContent() {
+        return content;
+    }
+
+    public void setContent(Object content) {
+        this.content = content;
     }
 }

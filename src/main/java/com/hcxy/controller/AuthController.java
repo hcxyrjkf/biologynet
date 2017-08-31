@@ -23,4 +23,16 @@ public class AuthController {
                       HttpSession session) {
         return authService.login(username, password, session);
     }
+
+    @PostMapping(value = "/register")
+    public Object resigter(@RequestParam("username") String username,
+                         @RequestParam("password") String password) {
+
+        return authService.register(username, password);
+    }
+
+    @DeleteMapping(value = "/logout")
+    public Object logout(HttpSession session) {
+        return authService.logout(session);
+    }
 }

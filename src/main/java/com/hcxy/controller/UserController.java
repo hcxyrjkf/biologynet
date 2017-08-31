@@ -6,6 +6,7 @@ import com.hcxy.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -20,13 +21,13 @@ public class UserController {
     private UserService userService;
 
     @GetMapping(value = "/users")
-    public List<User> userList() {
-        return userService.findAll();
+    public Object userList(HttpSession session) {
+        return userService.findAll(session);
     }
 
     @PostMapping(value = "/users")
-    public User userAdd(@RequestParam("username") String username,
-                          @RequestParam("password") String password) {
-        return userService.add(username, password);
+    public Object userAdd(User user,
+                        HttpSession session) {
+        return userService.save(user, session);
     }
 }
