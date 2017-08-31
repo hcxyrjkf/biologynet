@@ -13,6 +13,7 @@ import java.util.List;
  * @time 2017-08-30 23:52
  */
 @RestController
+@RequestMapping(value = "/api")
 public class UserController {
 
     @Resource

@@ -1,25 +1,41 @@
 # Function for v1.0
-## 功能
-### 用户管理
-* id
-* 权限2种:超管，会员
-* 积分
-
-### 产品管理
-* id
-* 源文件
-* 价格
-
-### 论坛管理
-* id
-* 帖子
-
-### 资源管理
-* id
-* 下载积分
-
 ## 路由
+* `/` 主页
 * `/dashboard` 用户管理
 * `/product` 产品管理
 * `/discuss` 论坛管理
-* `/ajax` Ajax API
+* `/api` Ajax API
+
+## 功能
+### 用户管理
+* 用户表
+    * id
+    * level
+    * score
+* 注册、登录
+* .找回密码
+* 用户crud
+
+### 物品管理
+* 产品表
+    * id
+    * sourceFile
+    * introduction
+    * price
+* 产品crud
+
+### 论坛管理
+* 帖子表
+    * id
+    * auther
+    * content
+* 发帖
+* 回帖
+* 帖子crud
+
+### 资源管理
+* 资源表
+    * id
+    * 下载积分
+* 发资源
+* 资源crud
