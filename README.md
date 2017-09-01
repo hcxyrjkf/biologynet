@@ -64,3 +64,8 @@
 ||* [x] 资源表|
 |* [ ] 资源CRUD|* [ ] 资源CRUD|
 |* [ ] 发资源|* [ ] 发资源|
+
+## 编码规范
+* [html-css](http://www.cnblogs.com/whitewolf/p/4491707.html#comment_tip)
+* [javascript](http://www.cnblogs.com/whitewolf/p/4491447.html)
+* [java](http://www.hawstein.com/posts/google-java-style.html)
