@@ -13,13 +13,13 @@
 * `/post` 帖子列表
     * `/{id}` id帖子的详细信息
 * `/api` Ajax API
-    * `/user` get,post
+    * `/users` get,post
         * `/{id}` get, post, put, delete
-    * `/product` get,post
+    * `/products` get,post
         * `/{id}` get, post, put, delete
-    * `/post` get,post
+    * `/posts` get,post
         * `/{id}` get, post, put, delete
-    * `/resource` get,post
+    * `/resources` get,post
         * `/{id}` get, post, put, delete
 
 ## 功能
@@ -37,18 +37,26 @@
 |* [ ] 找回密码|* [ ] 找回密码||
 
 ### 物品管理
-|前端|后端|
-|---|---|
-||* [x] 产品表|
-|* [ ] 产品CRUD|* [ ] 产品CRUD|
+|前端|后端|api|
+|---|---|---|
+||* [x] 产品表||
+|* [ ] 产品CRUD|* [ ] 产品查询|get:`/api/products`|
+|* [ ] 产品CRUD|* [ ] 产品增加|post:`/api/products`|
+|* [ ] 产品CRUD|* [ ] 单个产品查询|get:`/api/products/{id}`|
+|* [ ] 产品CRUD|* [ ] 单个产品更新|put:`/api/products/{id}`|
+|* [ ] 产品CRUD|* [ ] 单个产品删除|delete:`/api/products/{id}`|
 
 ### 论坛管理
-|前端|后端|
-|---|---|
-||* [x] 帖子表|
-|* [ ] 帖子CRUD|* [ ] 帖子CRUD|
-|* [ ] 发帖|* [ ] 发帖|
-|* [ ] 回帖|* [ ] 回帖|
+|前端|后端|api|
+|---|---|----|
+||* [x] 帖子表||
+|* [ ] 帖子CRUD|* [ ] 帖子查询|get:`/api/posts`|
+|* [ ] 帖子CRUD|* [ ] 帖子增加|post:`/api/posts`|
+|* [ ] 帖子CRUD|* [ ] 单个帖子查询|get:`/api/posts/{id}`|
+|* [ ] 帖子CRUD|* [ ] 单个帖子更新|put:`/api/posts/{id}`|
+|* [ ] 帖子CRUD|* [ ] 单个帖子删除|delete:`/api/posts/{id}`|
+|* [ ] 发帖|* [ ] 发帖||
+|* [ ] 回帖|* [ ] 回帖||
 
 ### 资源管理
 |前端|后端|
